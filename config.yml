@@ -1,0 +1,12 @@
+check-interval: 1200
+repeat-interval: 6000
+status-url: http://www.craftstats.com/mcstatus
+override-motd: true
+motd: "Mojang Servers are down. Logins may not work."
+commands:
+    up:
+        - say Mojang servers are back up and running.
+    down:
+        - say Mojang servers just went down.
+    repeatdown:
+        - say Mojang servers are down! Don't close minecraft!

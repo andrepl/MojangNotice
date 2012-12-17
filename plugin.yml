@@ -1,0 +1,23 @@
+name: MojangNotice
+main: com.norcode.bukkit.mojangnotice.MojangNoticePlugin
+version: 0.0.1
+commands:
+    mojangnotice:
+    	aliases: [mojang]
+        description: Change settings for the MojangNotice plugin.
+        usage: /<command>
+permissions:
+	mojangnotice.reload: 
+		default: op
+		description: allowed to reload the config file.
+	mojangnotice.check:
+		default: op
+		description: allowed force a status check
+    mojangnotice.set.*:
+        description: change mojangnotice config settings.
+        default: op
+        children:
+            mojangnotice.set.motd: true
+            mojangnotice.set.repeat-interval: true
+            mojangnotice.set.check-interval: true
+            mojangnotice.set.override-motd: true
